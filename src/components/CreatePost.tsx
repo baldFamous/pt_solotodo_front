@@ -16,7 +16,7 @@ const CreatePost = () => {
         axios.post('http://127.0.0.1:8000/api/posts/', { title, content, author })
             .then(response => {
                 console.log('Response:', response.data);
-                navigate(`/posts`);
+                navigate(`/posts/${response.data.id}`);
             })
             .catch(error => {
                 console.error('Error:', error);

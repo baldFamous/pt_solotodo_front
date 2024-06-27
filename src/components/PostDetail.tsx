@@ -13,7 +13,7 @@ const PostDetail = () => {
             .catch(error => console.error(error));
     }, [id]);
 
-    if (!post) return <div>Loading...</div>;
+    if (!post) return <div>El post solicitado No Existe</div>;
 
     return (
         <Container>
